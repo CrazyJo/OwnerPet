@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Pets</title>
+    @Styles.Render("~/Content/css-one")
+</head>
+<body>
+
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div ng-controller="homeCtrl as hC">
+                    <h1>{{hC.title}}</h1>
+                    <a href="#" ng-click="hC.backToUsersHandler()" ng-if="hC.backToUsersVisible">Back to all Users</a>
+                    <form name="recordForm">
+                        <input id="newRecord" ng-model="inputs.newRecord" placeholder={{hC.newRecordPlaceholder}} required>
+                        <button type="submit" ng-click="addNewRecord(inputs, recordForm)">Add</button>
+                    </form>
+                    <hr />
+                    <p><strong>Total count: </strong>{{ hC.paginOpt.totalItems | number }}</p>
+                    <div ui-grid="hC.gridOpt" class="gridUi"></div>
+                    <ul uib-pagination total-items="hC.paginOpt.totalItems" ng-model="hC.paginOpt.currentPage" items-per-page="hC.paginOpt.itemsPerPage" max-size="hC.paginOpt.maxSize" ng-change="hC.pageChanged()" class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/spa/infra/baseEntity.js"></script>
+    <script src="~/Scripts/spa/infra/wayBackHome.js"></script>
+    <script src="~/Scripts/spa/infra/pet.js"></script>
+    <script src="~/Scripts/spa/infra/user.js"></script>
+    <script src="~/Scripts/spa/infra/columnDef.js"></script>
+    <script src="~/Scripts/spa/infra/columnDefBuilder.js"></script>
+    <script src="~/Scripts/spa/infra/context.js"></script>
+    <script src="~/Scripts/spa/infra/gridOpt.js"></script>
+    <script src="~/Scripts/spa/infra/gridOptFactory.js"></script>
+    <script src="~/Scripts/spa/infra/httpRequestConfig.js"></script>
+    <script src="~/Scripts/spa/infra/IWebResponseCallBack.js"></script>
+    <script src="~/Scripts/spa/infra/iapiService.js"></script>
+    <script src="~/Scripts/spa/infra/paginationSet.js"></script>
+    <script src="~/Scripts/spa/infra/paginOpt.js"></script>
+    <script src="~/Scripts/spa/infra/possessiveCaseFormatter.js"></script>
+    <script src="~/Scripts/spa/infra/requestDetails.js"></script>
+    <script src="~/Scripts/spa/infra/webResponse.js"></script>
+    <script src="~/Scripts/spa/infra/state.js"></script>
+    <script src="~/Scripts/spa/infra/petsState.js"></script>
+    <script src="~/Scripts/spa/infra/usersState.js"></script>
+    
+    @Scripts.Render("~/bundles/vendors")
+    
+    @Scripts.Render("~/bundles/spa")
+
+</body>
+</html>
