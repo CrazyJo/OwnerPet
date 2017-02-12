@@ -21,7 +21,7 @@
                 if (sortColumns.length !== 0)
                 {
                     let direction = sortColumns[0].sort.direction;
-                    let descending = direction === 'asc' ? false : true;
+                    let descending = !(direction === 'asc');
                     sortChangedCallback(descending);
                 }
             });

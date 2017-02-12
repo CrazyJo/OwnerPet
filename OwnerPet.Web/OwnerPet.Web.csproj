@@ -205,19 +205,14 @@
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\css\ui-bootstrap-csp.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\css\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\css\bootstrap.min.css.map" />
     <Content Include="Content\css\bootstrap.css.map" />
     <Content Include="Content\css\bootstrap-theme.min.css.map" />
     <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\spa\infra\build\infra-build.js" />
     <Content Include="Scripts\spa\views\shared\grid\_customCell.html" />
     <Content Include="Scripts\spa\views\shared\grid\_removeBtn.html" />
     <Content Include="Scripts\spa\services\gridOptionsService.js" />
@@ -240,13 +235,8 @@
     <Content Include="Scripts\vendors\angular-resource.min.js.map" />
     <Content Include="Scripts\vendors\angular-touch.min.js.map" />
     <Content Include="Scripts\vendors\angular-sanitize.min.js.map" />
-    <None Include="Scripts\vendors\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\vendors\bootstrap.js" />
     <Content Include="Scripts\vendors\bootstrap.min.js" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.js" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.slim.js" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\spa\app.js" />
     <Content Include="Scripts\vendors\angular-mocks.js" />
     <Content Include="Scripts\vendors\angular-route.js" />
@@ -255,8 +245,6 @@
     <Content Include="Scripts\vendors\angular.min.js" />
     <Content Include="Scripts\vendors\angular.min.js.map" />
     <Content Include="Scripts\vendors\angular-route.min.js.map" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.slim.min.map" />
-    <Content Include="Scripts\vendors\jquery-3.1.1.min.map" />
     <Content Include="Scripts\vendors\ui-grid.min.css" />
     <Content Include="Scripts\vendors\ui-grid.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -297,9 +285,6 @@
     <TypeScriptCompile Include="Scripts\spa\infra\src\core\webResponse.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -319,9 +304,12 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Scripts\spa\infra\build\" />
+    <Content Include="App_Data\OwnerPetDB.sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\spa\infra\build\infra-build.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,11 +11,12 @@
 
     constructor(context: Context, apiService: IApiService, requestDetails: RequestDetails)
     {
+        let sortCallBack = (d: boolean) => context.state.sortChangedHandler(d);
         this.context = context;
         this.apiService = apiService;
         this.title = null;
         this.newRecordPlaceholder = null;
-        this.gridOpt = new GridOptFactory<T>(context.ctrlScope, (d: boolean) => this.sortChangedHandler(d)).getOpt();
+        this.gridOpt = new GridOptFactory<T>(context.ctrlScope, sortCallBack).getOpt();
         this.gridOpt.columnDefs = this.getColumnDefs();
         this.paginOpt = new PaginOpt();
         this.requestDetails = requestDetails;
