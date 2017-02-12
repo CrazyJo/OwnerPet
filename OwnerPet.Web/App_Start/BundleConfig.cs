@@ -6,8 +6,6 @@ namespace OwnerPet.Web
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/Infrastructure").Include("~/Scripts/spa/infra/*.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/vendors").Include(
                 "~/Scripts/vendors/angular.min.js",
                 "~/Scripts/vendors/angular-resource.min.js",
@@ -19,6 +17,7 @@ namespace OwnerPet.Web
                 "~/Scripts/vendors/ui-grid.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/spa").Include(
+                "~/Scripts/spa/infra/build/infra-build.js",
                  "~/Scripts/spa/app.js",
                  "~/Scripts/spa/services/apiService.js",
                  "~/Scripts/spa/services/userService.js",

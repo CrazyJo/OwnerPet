@@ -275,26 +275,26 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\spa\infra\baseEntity.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\columnDef.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\columnDefBuilder.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\context.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\gridOpt.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\gridOptFactory.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\httpRequestConfig.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\IApiService.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\IWebResponseCallBack.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\paginationSet.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\paginOpt.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\pet.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\petsState.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\possessiveCaseFormatter.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\requestDetails.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\state.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\user.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\usersState.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\wayBackHome.ts" />
-    <TypeScriptCompile Include="Scripts\spa\infra\webResponse.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\entities\baseEntity.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\grid\columnDef.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\grid\columnDefBuilder.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\states\context.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\grid\gridOpt.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\grid\gridOptFactory.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\httpRequestConfig.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\services\IApiService.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\IWebResponseCallBack.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\paginOpt\paginationSet.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\paginOpt\paginOpt.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\entities\pet.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\states\petsState.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\possessiveCaseFormatter.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\requestDetails.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\states\baseState.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\entities\user.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\states\usersState.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\wayBackHome.ts" />
+    <TypeScriptCompile Include="Scripts\spa\infra\src\core\webResponse.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -321,6 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\spa\infra\build\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

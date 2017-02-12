@@ -1,13 +1,12 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noEmitOnError": true,
     "removeComments": false,
-    "noImplicitAny": false
+    "sourceMap": true,
+    "target": "es5",
+    "outFile": "Scripts/spa/infra/build/infra-build.js"
   },
   "exclude": [
     "node_modules",
