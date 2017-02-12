@@ -9,7 +9,7 @@ namespace OwnerPet.Service
     {
         public override void Load()
         {
-            Bind<IDbFactory>().To<OwnerPetSqliteFactory>().InThreadScope();
+            Bind<IDbFactory>().To<OwnerPetSqliteFactory>().InSingletonScope();
             Bind<IUnitOfWork>().To<OwnerPetUoW>();
             Bind<IRepository<User, int>>().To<EntityRepository<User, int>>();
             Bind<IRepository<Pet, int>>().To<EntityRepository<Pet, int>>();
